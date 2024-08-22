@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Filmes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="info">
+            <img src="static/CINEMA-E-AUDIOVISUAL.webp" alt="logo">
+            <p> Melhoress fimes para assistir!</p>
+        </div>
+
+    </header>
+
+    <section class="corpo">
+
+        <p>ADICIONE UM FILME:</p>:</p>
+
+        <div>
+            <form action="/adicionar" method="post">
+
+                <div class="grupo">
+                    <label for="nome">Nome do filme:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="grupo">
+                    <label for="genero">Gênero:</label>
+                    <input type="text" id="genero" name="genero" required>
+                </div>
+
+                <div class="grupo">
+                    <button type="submit">SALVAR</button>
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer class="rodape">
+
+        <img src="static/CINEMA-E-AUDIOVISUAL.webp" alt="logo">
+
+        <p class="direitos">© Todos os direitos reservados</p>
+
+    </footer>
+
+</body>
+</html>

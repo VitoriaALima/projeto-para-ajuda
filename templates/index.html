@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>FILMES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="info">
+            <img src="../static/CINEMA-E-AUDIOVISUAL.webp" alt="logo">
+            <p class="centralizar"> Melhoress fimes para assistir!</p>
+        </div>
+
+    </header>
+    <div class="body">
+        <h1 class="centralizar">Filmes:</h1>
+        <br>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Filme</th>
+                    <th>Gênero</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for filme in filmes %}
+                <tr>
+                    <td>{{ filme.nome }}</td>
+                    <td>{{ filme.genero }}</td>
+                    <td>
+                        <a href="/editar/{{ filme[0] }}">Editar</a> | 
+                        <a href="/apagar_filme/{{ filme[0] }}">Apagar</a>
+                    </td>
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+
+        <a href="/adicionarr" class="centralizar botao">Adicionar</a>
+    </div>
+
+
+
+    <footer class="rodape">
+        <div class="centralizar">
+            <img src="../static/CINEMA-E-AUDIOVISUAL.webp" alt="logo" class="">
+            <br>
+            <p class="centralizar">© Todos os direitos reservados</p>
+
+        </div>
+        
+    </footer>
+
+</body>
+</html>
